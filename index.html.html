@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>YOEL GAMING | Official Website</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #050811;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+/* NAVIGATION */
+
+header {
+    background: #080e1c;
+    padding: 20px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    border-bottom: 1px solid #153c70;
+}
+
+.logo {
+    font-size: 27px;
+    font-weight: bold;
+    color: #168cff;
+    letter-spacing: 2px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 8px;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #168cff;
+}
+
+/* HERO SECTION */
+
+.hero {
+    min-height: 570px;
+    padding: 100px 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background:
+    linear-gradient(rgba(2,8,20,.88),rgba(2,8,20,.94)),
+    url("https://images.unsplash.com/photo-1542751371-adc38448a05e?w=1600");
+    background-position: center;
+    background-size: cover;
+}
+
+.hero h1 {
+    font-size: clamp(42px, 8vw, 75px);
+    color: #168cff;
+    text-shadow: 0 0 25px #087dff;
+}
+
+.hero h2 {
+    margin: 15px 0;
+    font-size: 25px;
+}
+
+.hero p {
+    max-width: 600px;
+    line-height: 1.8;
+    color: #c5d5ee;
+}
+
+.btn {
+    display: inline-block;
+    background: #087dff;
+    color: white;
+    text-decoration: none;
+    padding: 14px 25px;
+    border-radius: 8px;
+    margin: 20px 8px 0;
+    font-weight: bold;
+    transition: .3s;
+}
+
+.btn:hover {
+    background: #0053ae;
+    transform: translateY(-3px);
+}
+
+.btn.tiktok {
+    background: #e90065;
+}
+
+/* GENERAL SECTIONS */
+
+section {
+    padding: 75px 8%;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 32px;
+    color: #168cff;
+    margin-bottom: 35px;
+}
+
+/* ABOUT */
+
+.about {
+    background: #091326;
+    text-align: center;
+}
+
+.about p {
+    max-width: 750px;
+    margin: auto;
+    line-height: 1.9;
+    color: #c7d4e8;
+}
+
+.profile {
+    background: #101f38;
+    max-width: 550px;
+    margin: 30px auto 0;
+    padding: 25px;
+    border-radius: 15px;
+    border: 1px solid #168cff;
+    text-align: left;
+}
+
+.profile p {
+    margin: 12px 0;
+    color: white;
+}
+
+/* GAMING CONTENT */
+
+.games {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+}
+
+.game-card {
+    background: #101a2d;
+    border: 1px solid #193e70;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: .3s;
+}
+
+.game-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 0 20px #087dff55;
+}
+
+.game-card img {
+    width: 100%;
+    height: 175px;
+    object-fit: cover;
+}
+
+.game-card h3 {
+    color: #168cff;
+    padding: 15px 15px 5px;
+}
+
+.game-card p {
+    color: #c4cee0;
+    padding: 5px 15px 20px;
+    line-height: 1.6;
+}
+
+/* VIDEOS */
+
+.videos {
+    background: #091326;
+    text-align: center;
+}
+
+.video-box {
+    max-width: 650px;
+    margin: auto;
+    background: #101f38;
+    border: 1px solid #168cff;
+    padding: 30px;
+    border-radius: 15px;
+}
+
+.video-box p {
+    line-height: 1.8;
+    color: #c7d4e8;
+}
+
+/* TIKTOK */
+
+.tiktok-section {
+    text-align: center;
+    background: linear-gradient(120deg,#101326,#111e3a);
+}
+
+.tiktok-section p {
+    line-height: 1.8;
+    color: #d1d9e8;
+}
+
+/* FOOTER */
+
+footer {
+    background: #03060d;
+    text-align: center;
+    padding: 30px 15px;
+    color: #9cabc3;
+    line-height: 2;
+}
+
+footer strong {
+    color: #168cff;
+}
+
+/* MOBILE */
+
+@media(max-width:600px) {
+    header {
+        justify-content: center;
+        text-align: center;
+    }
+
+    nav {
+        line-height: 2.5;
+    }
+
+    .hero {
+        min-height: 480px;
+        padding: 60px 18px;
+    }
+
+    section {
+        padding: 55px 6%;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+
+<header>
+    <div class="logo">YOEL GAMING</div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#games">Gaming</a>
+        <a href="#videos">Videos</a>
+        <a href="#tiktok">TikTok</a>
+    </nav>
+</header>
+
+
+<!-- HOMEPAGE -->
+
+<div class="hero" id="home">
+
+    <h1>YOEL GAMING</h1>
+
+    <h2>WELCOME TO MY GAMING WORLD</h2>
+
+    <p>
+        Welcome to the official website of Yoel!
+        Gaming lover, TikTok content creator and
+        entertainment enthusiast.
+        Explore my gaming world and follow my journey!
+    </p>
+
+    <a class="btn tiktok"
+       href="https://www.tiktok.com/@yoel_empire?_r=1&_t=ZS-9BNVBktcv6S"
+       target="_blank">
+       FOLLOW ME ON TIKTOK
+    </a>
+
+    <a class="btn" href="#about">
+       EXPLORE MY WEBSITE
+    </a>
+
+</div>
+
+
+<!-- BIOGRAPHY -->
+
+<section class="about" id="about">
+
+    <h2 class="section-title">ABOUT ME</h2>
+
+    <p>
+        Hello everyone! My name is Joel, popularly known
+        as Yoel. I am a gaming enthusiast and TikTok
+        gaming content creator. I enjoy gaming,
+        creativity, video editing and sharing
+        entertaining content with my audience.
+        Welcome to my world!
+    </p>
+
+    <div class="profile">
+
+        <h2 style="color:#168cff;text-align:center;">
+            MY BIOGRAPHY
+        </h2>
+
+        <p><strong>Name:</strong> Joel</p>
+
+        <p><strong>Website Name:</strong> Yoel</p>
+
+        <p><strong>Gender:</strong> Male</p>
+
+        <p><strong>Zodiac Sign:</strong> Libra ♎</p>
+
+        <p><strong>TikTok Name:</strong> Yoel</p>
+
+        <p><strong>TikTok Username:</strong> @yoel_empire</p>
+
+        <p><strong>Occupation:</strong> Gaming Content Creator</p>
+
+        <p><strong>Interests:</strong> Gaming, Football and Video Editing</p>
+
+    </div>
+
+</section>
+
+
+<!-- GAMING -->
+
+<section id="games">
+
+    <h2 class="section-title">MY GAMING WORLD</h2>
+
+    <div class="games">
+
+        <div class="game-card">
+            <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=600"
+                 alt="Gaming setup">
+            <h3>GAMING</h3>
+            <p>Welcome to my gaming universe!</p>
+        </div>
+
+        <div class="game-card">
+            <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?w=600"
+                 alt="Video game controller">
+            <h3>GAMEPLAY</h3>
+            <p>Enjoy exciting gaming experiences.</p>
+        </div>
+
+        <div class="game-card">
+            <img src="https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?w=600"
+                 alt="Gaming screen">
+            <h3>ENTERTAINMENT</h3>
+            <p>Gaming entertainment and creative content.</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- VIDEO SECTION -->
+
+<section class="videos" id="videos">
+
+    <h2 class="section-title">MY GAMING VIDEOS</h2>
+
+    <div class="video-box">
+
+        <h3 style="color:#168cff;margin-bottom:15px;">
+            YOEL VIDEO SHOWCASE
+        </h3>
+
+        <p>
+            This is where I will showcase my gaming
+            videos, football edits, highlights and
+            TikTok content.
+        </p>
+
+        <p style="margin-top:15px;">
+            New content coming soon!
+        </p>
+
+        <a class="btn tiktok"
+           href="https://www.tiktok.com/@yoel_empire?_r=1&_t=ZS-9BNVBktcv6S"
+           target="_blank">
+           WATCH MY TIKTOK VIDEOS
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- TIKTOK SECTION -->
+
+<section class="tiktok-section" id="tiktok">
+
+    <h2 class="section-title">FOLLOW YOEL ON TIKTOK</h2>
+
+    <p>
+        Join my TikTok community!
+        Follow my page for gaming videos,
+        edits and entertaining content.
+    </p>
+
+    <h2 style="margin-top:20px;color:#ff267d;">
+        @yoel_empire
+    </h2>
+
+    <a class="btn tiktok"
+       href="https://www.tiktok.com/@yoel_empire?_r=1&_t=ZS-9BNVBktcv6S"
+       target="_blank">
+       VISIT MY TIKTOK PAGE
+    </a>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <p>© 2026 <strong>YOEL GAMING</strong></p>
+
+    <p>Designed with passion by Yoel.</p>
+
+    <p>Support my TikTok page.</p>
+
+    <p>Thanks and God bless you ❤️</p>
+
+</footer>
+
+
+</body>
+</html>
